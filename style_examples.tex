@@ -1,0 +1,224 @@
+
+% ----------------------------------------------------------------------
+\section{Style examples}
+% ----------------------------------------------------------------------
+
+% ============================================================
+\begin{frame}{Blocks}
+
+  \begin{block}{Regular Block}
+    This is a regular block with \alert{alerted text} and normal content.
+  \end{block}
+
+  \begin{exampleblock}{Example Block}
+    This is an example block, good for encodings or definitions.
+  \end{exampleblock}
+
+  \begin{alertblock}{Alert Block}
+    This is an alert block, good for warnings or key results.
+  \end{alertblock}
+
+\end{frame}
+
+% ============================================================
+\begin{frame}{Itemize \& Enumerate}
+
+  \begin{columns}
+    \column{0.5\textwidth}
+      Itemize:
+      \begin{itemize}
+        \item First item
+        \item Second item with \alert{alert}
+          \begin{itemize}
+            \item Nested item
+            \item Another nested
+          \end{itemize}
+        \item Third item
+      \end{itemize}
+
+    \column{0.5\textwidth}
+      Enumerate:
+      \begin{enumerate}
+        \item First step
+        \item Second step
+          \begin{enumerate}
+            \item Sub-step a
+            \item Sub-step b
+          \end{enumerate}
+        \item Third step
+      \end{enumerate}
+  \end{columns}
+
+\end{frame}
+
+% ============================================================
+\begin{frame}{Columns}
+
+  \begin{columns}[T]
+    \column{0.33\textwidth}
+      \begin{block}{Column 1}
+        Left column content. Can hold text, lists, or code.
+      \end{block}
+      \begin{itemize}
+        \item item one
+        \item item two
+      \end{itemize}
+
+    \column{0.33\textwidth}
+      \begin{exampleblock}{Column 2}
+        Middle column content.
+      \end{exampleblock}
+      Some regular text below the block.
+
+    \column{0.33\textwidth}
+      \begin{alertblock}{Column 3}
+        Right column content.
+      \end{alertblock}
+      \begin{enumerate}
+        \item step one
+        \item step two
+      \end{enumerate}
+  \end{columns}
+
+\end{frame}
+
+
+% ============================================================
+\begin{frame}{Theorem, Definition \& Proof}
+
+  \begin{definition}
+    A \alert{stable model} of a program $P$ is a minimal model of
+    the reduct $P^M$ for some interpretation $M$.
+  \end{definition}
+
+  \begin{theorem}
+    For any program $P$, if $M$ is a stable model of $P$ then
+    $M \models P$.
+  \end{theorem}
+
+  \begin{proof}
+    By construction of the GL reduct $P^M$, every rule head
+    supported by $M$ is derivable from $P^M$. Minimality
+    follows from the definition of stable models. \qed
+  \end{proof}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Listings Style Reference}
+
+\tiny
+\textit{default}
+\begin{lstlisting}[language=clingos]
+a(1). b(X) :- a(X). #show b/1.
+% Comment
+\end{lstlisting}
+
+
+\textit{blue-dark}
+\begin{lstlisting}[style=blue-dark]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+\textit{blue-mid}
+\begin{lstlisting}[style=blue-mid]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+\textit{blue-light}
+\begin{lstlisting}[style=blue-light]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+\textit{blue-outline}
+\begin{lstlisting}[style=blue-outline]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+
+\end{frame}
+\begin{frame}[fragile]{Listings Style Reference (cont.)}
+\textit{green-dark}
+\begin{lstlisting}[style=green-dark]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+\textit{green-light}
+\begin{lstlisting}[style=green-light]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+\textit{green-outline}
+\begin{lstlisting}[style=green-outline]
+a(1). b(X) :- a(X). #show b/1.
+\end{lstlisting}
+\textit{console}
+\begin{lstlisting}[style=console]
+$ clingo example.lp
+clingo version 5.5.0
+Reading from example.lp
+Solving...
+Answer: 1
+b(1)
+SATISFIABLE
+\end{lstlisting}
+
+
+\end{frame}
+
+\begin{frame}{Style Reference — TikZ Base Nodes}
+\begin{tikzpicture}[node distance=1.5cm]
+
+  % --- blue row
+  \node[font=\tiny\itshape, text=potnavy-mid] at (1.5, 4.3) {blue-dark};
+  \node[blue-dark]    at (1.5, 3.8) {node};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (3.2, 4.3) {blue-mid};
+  \node[blue-mid]     at (3.2, 3.8) {node};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (4.9, 4.3) {blue-light};
+  \node[blue-light]   at (4.9, 3.8) {node};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (6.6, 4.3) {blue-outline};
+  \node[blue-outline] at (6.6, 3.8) {node};
+  % --- green row
+  \node[font=\tiny\itshape, text=potnavy-mid] at (1.5, 3.1) {green-dark};
+  \node[green-dark]    at (1.5, 2.6) {node};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (3.2, 3.1) {green-light};
+  \node[green-light]   at (3.2, 2.6) {node};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (4.9, 3.1) {green-outline};
+  \node[green-outline] at (4.9, 2.6) {node};
+  % --- section label styles + grouping example
+  \draw[section-box] (0.3, 0.3) rectangle (9.5, 1.7);
+  \node[section-label] at (0.3, 1.7) {section};
+  \node[section-title]    at (1.5, 1) {Section Title};
+  \node[subsection-title] at (3.5, 1) {Subsection Title};
+  \node[section-info]     at (6.0, 1) {section-info text};
+  % --- arrows
+  \node[font=\tiny\itshape, text=potnavy-mid] at (8.5, 4.3) {arrw};
+  \draw[arrw] (7.8, 3.8) -- (9.2, 3.8);
+  \node[font=\tiny\itshape, text=potnavy-mid] at (8.5, 3.1) {subarrw};
+  \draw[subarrw] (7.8, 2.6) -- (9.2, 2.6);
+  \node[font=\tiny\itshape, text=potnavy-mid] at (8.5, 2.3) {arrw-system};
+  \draw[arrw-system] (7.8, 1.8) -- (9.2, 1.8);
+
+\end{tikzpicture}
+\end{frame}
+\begin{frame}{Style Reference — Tikz custom nodes}
+\begin{tikzpicture}[node distance=1.5cm]
+  % --- semantic nodes row 1
+  \node[font=\tiny\itshape, text=potnavy-mid] at (1.5, 4.3) {encoding};
+  \node[encoding]  at (1.5, 3.8) {encoding};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (3.2, 4.3) {encoding2};
+  \node[encoding2] at (3.2, 3.8) {encoding2};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (4.9, 4.3) {input};
+  \node[input]     at (4.9, 3.8) {input};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (6.6, 4.3) {output};
+  \node[output]    at (6.6, 3.8) {output};
+  % --- semantic nodes row 2
+  \node[font=\tiny\itshape, text=potnavy-mid] at (1.5, 3.1) {system};
+  \node[system]    at (1.5, 2.6) {system};
+  \node[font=\tiny\itshape, text=potnavy-mid] at (3.2, 3.1) {action};
+  \node[action]    at (3.2, 2.6) {action};
+  % --- usage example with arrows
+  \node[font=\tiny\itshape, text=potnavy-mid] at (5.5, 0.9) {usage example};
+  \node[system]   (sys)  at (1.5, 0.3) {system};
+  \node[encoding] (enc)  at (3.5, 0.3) {encoding};
+  \node[output]   (out)  at (5.5, 0.3) {output};
+  \node[action]   (act)  at (7.5, 0.3) {action};
+  \draw[arrw]      (sys) -- (enc);
+  \draw[arrw]      (enc) -- (out);
+  \draw[arrw-system] (act) -- (out);
+\end{tikzpicture}
+\end{frame}

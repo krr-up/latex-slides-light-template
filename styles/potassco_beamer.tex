@@ -1,0 +1,152 @@
+% ============================================================
+% BEAMER THEME — Potassco / University of Potsdam
+% ============================================================
+% Sections:
+%   1. Theme & Logos
+%   2. Footer
+%   3. Blocks
+%   4. Colors
+%   5. Formats & Templates
+%   6. Section Title Slide
+% ============================================================
+
+
+% ============================================================
+% 1. THEME & LOGOS
+% ============================================================
+\usetheme{default}
+\usecolortheme{beaver}
+
+% Logo files — update paths if directory structure changes
+\pgfdeclareimage[height=2cm]{potasscologo}{./include/logos/potassco-technologies/Logo/Digital/pt_rgb_2colors_digital.png}
+\pgfdeclareimage[height=0.5cm]{potasscoicon}{./include/logos/potassco-technologies/Icon/Digital/pt_icon_rgb_green_digital.png}
+
+
+% ============================================================
+% 2. FOOTER
+% ============================================================
+% Layout: [author (institute)] [title + page] [logo/page]
+% Widths must sum to \paperwidth: .4 + .5 + .1 = 1.0
+
+\setbeamertemplate{headline}{}
+
+\setbeamertemplate{footline}{
+  \hbox{\color{white}\rule{\paperwidth}{0.4pt}}%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,leftskip=6pt]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\ (\insertshortinstitute)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,leftskip=6pt]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace{20pt}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{logo in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+% Footer colors
+\setbeamercolor{author in head/foot}{bg=potnavy!60, fg=white}
+\setbeamercolor{title in head/foot}{bg=potnavy!75!black, fg=white}
+\setbeamercolor{logo in head/foot}{bg=potnavy, fg=white}
+
+
+% ============================================================
+% 3. BLOCKS
+% ============================================================
+% Template: [default] = plain rectangles (no shadow/rounding)
+% Alternatives: [rounded][shadow=false], [rounded][shadow=true]
+
+\setbeamertemplate{blocks}[default]
+
+\setbeamercolor{block title}{fg=white, bg=potnavy!80}
+\setbeamercolor{block body}{fg=potnavy, bg=potnavy!8}
+\setbeamercolor{block title example}{fg=white, bg=potgreen}
+\setbeamercolor{block body example}{fg=potnavy, bg=potgreen!30}
+\setbeamercolor{block title alerted}{fg=white, bg=potblue}
+\setbeamercolor{block body alerted}{fg=potnavy, bg=potblue!8}
+
+\setbeamerfont{block title}{size=\small}
+\setbeamerfont{block title example}{size=\small}
+\setbeamerfont{block title alerted}{size=\small}
+\setbeamerfont{block body}{size=\footnotesize}
+\setbeamerfont{block body example}{size=\footnotesize}
+\setbeamerfont{block body alerted}{size=\footnotesize}
+
+
+% ============================================================
+% 4. COLORS
+% ============================================================
+
+% --- Lists
+\setbeamercolor{itemize item}{fg=potnavy}
+\setbeamercolor{itemize subitem}{fg=potnavy}
+\setbeamercolor{section number projected}{bg=potnavy}
+\setbeamercolor{subsection number projected}{bg=potnavy}
+
+% --- Palette (used by some outer themes)
+\setbeamercolor{palette primary}{bg=potnavy, fg=white}
+\setbeamercolor{palette secondary}{bg=potnavy, fg=white}
+\setbeamercolor{palette tertiary}{bg=potnavy!70!white, fg=white}
+\setbeamercolor{palette quaternary}{bg=potnavy!60!white, fg=white}
+
+% --- Title & frame title
+\setbeamercolor*{title}{bg=white, fg=potnavy}
+\setbeamercolor{frametitle}{fg=potnavy, bg=white}
+
+% --- Footnotes
+\setbeamercolor{footnote}{fg=black!60}
+\setbeamercolor{footnote mark}{fg=black!60}
+
+% --- Text roles
+\setbeamercolor{alerted text}{fg=potblue}  % change to potgreen for green alerts
+\setbeamercolor{structure}{fg=potnavy}
+\setbeamercolor{institute}{fg=potnavy!60}
+
+
+% ============================================================
+% 5. FORMATS & TEMPLATES
+% ============================================================
+
+% Remove footnote rule line
+\renewcommand\footnoterule{}
+
+% Remove navigation symbols (comment out to restore)
+\setbeamertemplate{navigation symbols}{}
+
+% Inner theme: circles for bullet points
+% Alternatives: rectangles, inmargin, default
+\useinnertheme{circles}
+
+% Table of contents style
+\setbeamertemplate{section in toc}{%
+  \leavevmode\leftskip=5.65ex%
+  \llap{\raisebox{0.2ex}{\textcolor{gray}{$\circ$}}\kern1ex}%
+  \inserttocsection\par%
+}
+
+
+% ============================================================
+% 6. SECTION TITLE SLIDE
+% ============================================================
+% Shown automatically before each \section{}
+% Remove \AtBeginSection block to disable
+
+\AtBeginSection{
+  \begin{frame}
+    \vfill
+    \bigskip
+    \bigskip
+    \centering
+    \includegraphics[height=2em, keepaspectratio,
+      trim=10pt 10pt 10pt 10pt, clip]{./include/logos/potassco-technologies/Icon/Digital/pt_icon_rgb_green_digital.png}%
+    \hspace{0.4em}%
+    {\usebeamerfont{title}\color{potnavy}\textbf{\LARGE\MakeUppercase{\insertsectionhead}}}
+    \vfill
+  \end{frame}
+}
+
+% Saves the default text color at document start (used in some diagrams)
+\AtBeginDocument{\colorlet{defaultcolor}{.}}

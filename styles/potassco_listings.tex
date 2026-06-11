@@ -1,0 +1,95 @@
+% %%%%%%%%%%%%%%%%%%%%% Listings
+\usepackage{listings}
+\input{./include/asp-macros/listings}
+
+\newcommand{\lstbasicstyle}{\ttfamily\scriptsize}
+
+
+\lstdefinelanguage{clingos}{%
+  language=clingo,
+  basicstyle=\lstbasicstyle,
+  aboveskip=1.5em,
+  belowskip=1em,
+  commentstyle={\color{potnavy-mid}\itshape}
+}
+
+\lstset{
+  columns=fullflexible,
+  numberblanklines=false,
+  xleftmargin=0.1cm,
+  framesep=4pt,
+  frame=single,
+  numbers=none,
+  basicstyle=\lstbasicstyle,
+  escapeinside={(*@}{@*)}
+}
+
+% ============================================================
+% PRIMITIVE styles — named by color, no semantics
+% Use these when you need direct color control per-slide
+% ============================================================
+
+\lstdefinestyle{blue-dark}{
+  backgroundcolor=\color{potnavy},
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{white},
+  rulecolor=\color{potnavy},
+  escapeinside={(*@}{@*)},
+}
+\lstdefinestyle{blue-mid}{
+  backgroundcolor=\color{potnavy-mid!30},
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{potnavy},
+  rulecolor=\color{potnavy},
+  escapeinside={(*@}{@*)},
+}
+\lstdefinestyle{blue-light}{
+  backgroundcolor=\color{potblue-light},
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{potnavy},
+  rulecolor=\color{potnavy},
+  escapeinside={(*@}{@*)},
+}
+\lstdefinestyle{blue-outline}{
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{potblue},
+  frame=single,
+  rulecolor=\color{potblue},
+  escapeinside={(*@}{@*)},
+}
+\lstdefinestyle{green-dark}{
+  backgroundcolor=\color{potgreen},
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{white},
+  rulecolor=\color{potgreen},
+  escapeinside={(*@}{@*)},
+}
+\lstdefinestyle{green-light}{
+  backgroundcolor=\color{potgreen-light},
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{potnavy},
+  rulecolor=\color{potgreen},
+  escapeinside={(*@}{@*)},
+}
+\lstdefinestyle{green-outline}{
+  language=clingos,
+  basicstyle=\lstbasicstyle\color{potgreen},
+  frame=single,
+  rulecolor=\color{potgreen},
+  escapeinside={(*@}{@*)},
+}
+
+% shell
+\lstdefinestyle{console}{
+  frame=none,
+  language=sh,
+  basicstyle=\lstbasicstyle\color{potnavy-mid},
+  linewidth=14cm,
+  escapeinside={(*@}{@*)}
+}
+
+% ============================================================
+% SEMANTIC styles — named by role, defined in terms of above
+% Use these as defaults; override per-slide with primitives
+% ============================================================
+

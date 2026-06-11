@@ -1,0 +1,138 @@
+\usepackage{tikz}
+% ============================================================
+% TIKZ STYLES
+% ============================================================
+\tikzset{
+  % --- PRIMITIVES (color-named) ---
+  blue-dark/.style={
+    fill=potnavy,
+    draw=potnavy,
+    text=white,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  blue-mid/.style={
+    fill=potnavy-mid!30,
+    draw=potnavy-mid,
+    text=potnavy,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  blue-light/.style={
+    fill=potblue-light,
+    draw=potnavy-mid,
+    text=potnavy,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  blue-outline/.style={
+    fill=white,
+    draw=potblue,
+    text=potblue,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  green-dark/.style={
+    fill=potgreen,
+    draw=potgreen,
+    text=white,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  green-light/.style={
+    fill=potgreen-light,
+    draw=potgreen,
+    text=potnavy,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  green-outline/.style={
+    fill=white,
+    draw=potgreen,
+    text=potgreen,
+    font=\scriptsize,
+    inner sep=5pt,
+    align=center
+  },
+  % --- SECTION LABELS ---
+  % section container box
+  section-box/.style={
+    draw=potnavy,
+    rounded corners,
+    fill=potnavy,
+    fill opacity=0.04
+  },
+  % section box label node
+  section-label/.style={
+    blue-dark,
+    rounded corners,
+    font=\tiny\bfseries,
+    inner sep=3pt,
+    anchor=north west
+  },
+  section/.style={blue-dark},
+  subsection/.style={blue-mid},
+  section-title/.style={
+    font=\scriptsize\bfseries,
+    text=potnavy
+  },
+  subsection-title/.style={
+    font=\scriptsize,
+    text=potnavy-mid,
+    align=center
+  },
+  section-info/.style={
+    font=\tiny,
+    text=potnavy-mid,
+    align=left
+  },
+  % --- ARROWS ---
+  arrw/.style={
+    draw=potblue,
+    font=\tiny,
+    -latex
+  },
+  subarrw/.style={
+    draw=potnavy-mid,
+    opacity=0.6,
+    densely dotted,
+    -latex
+  },
+  arrw-system/.style={
+    draw=potnavy,
+    dotted,
+    -latex
+  },
+  % --- GRID ---
+  grid/.style={
+    gray,
+    very thin,
+    opacity=0.1
+  },
+  % --- SEMANTIC (role-named) ---
+  encoding/.style={blue-light},
+  encoding2/.style={blue-mid},
+  input/.style={green-outline},
+  output/.style={green-dark},
+  system/.style={
+    blue-dark,
+    double,
+    rounded corners
+  },
+  action/.style={
+    fill=potblue,
+    draw=potblue,
+    text=white,
+    double,
+    rounded corners,
+    font=\tiny,
+    inner sep=3pt,
+    align=center
+  },
+}

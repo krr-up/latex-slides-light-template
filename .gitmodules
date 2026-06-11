@@ -1,0 +1,6 @@
+[submodule "include/logos"]
+	path = include/logos
+	url = ../logos
+[submodule "include/asp-macros"]
+	path = include/asp-macros
+	url = ../asp-macros.git

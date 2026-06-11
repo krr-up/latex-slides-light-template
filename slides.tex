@@ -1,0 +1,65 @@
+\documentclass[t]{beamer}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% ============================================================
+% POTASSCO STYLES
+% ============================================================
+\input{styles/potassco_colors} %Include to define colors
+\input{styles/potassco_beamer} %Include to set beamer theme and color scheme
+\input{styles/potassco_listings} %Include if you want to use listings
+\input{styles/potassco_tikz} %Include if you want to use TikZ !!!After macros
+
+% \input{macro}
+
+% ============================================================
+% TITLE
+% ============================================================
+\title{Title}
+\author{Names}
+\institute[KRR@UP]{University of Potsdam \&\ Potassco Solutions GmbH \\
+  \bigskip
+  \pgfuseimage{potasscologo}}
+\date{}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+\begin{document}
+% ----------------------------------------------------------------------
+\frame{\titlepage}
+% ----------------------------------------------------------------------
+\begin{frame}{Outline}
+  \bigskip
+  \vfill
+  \tableofcontents
+\end{frame}
+
+% ----------------------------------------------------------------------
+\section{Introduction}
+% ----------------------------------------------------------------------
+\begin{frame}{Motivation}
+\end{frame}
+% ----------------------------------------------------------------------
+\section{Preliminaries}
+% ----------------------------------------------------------------------
+\begin{frame}{}
+\end{frame}
+% ----------------------------------------------------------------------
+\section{Summary}
+% ---------------------------------------------------------------------
+\begin{frame}{Summary}
+  \begin{itemize}
+  \item \url{potassco.org}
+  \end{itemize}
+\end{frame}
+\include{style_examples}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% End:
