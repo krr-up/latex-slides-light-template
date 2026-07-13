@@ -4,6 +4,10 @@
 
 \newcommand{\lstbasicstyle}{\ttfamily\scriptsize}
 
+\usepackage{caption}
+
+\captionsetup[lstlisting]{position=top,justification=raggedleft,singlelinecheck=false,labelformat=empty,font={scriptsize,tt},skip=0pt}
+
 
 \lstdefinelanguage{clingos}{%
   language=clingo,
@@ -23,6 +27,8 @@
   basicstyle=\lstbasicstyle,
   escapeinside={(*@}{@*)}
 }
+
+
 
 % ============================================================
 % PRIMITIVE styles — named by color, no semantics

@@ -2,13 +2,17 @@
 % ============================================================
 % TIKZ STYLES
 % ============================================================
+% \usepackage{moresize}
+% \newcommand{\midtiny}{\fontsize{6}{7.2}\selectfont}
+\newcommand{\tikzbasicstyle}{\scriptsize}
+
 \tikzset{
   % --- PRIMITIVES (color-named) ---
   blue-dark/.style={
     fill=potnavy,
     draw=potnavy,
     text=white,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -16,7 +20,7 @@
     fill=potnavy-mid!30,
     draw=potnavy-mid,
     text=potnavy,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -24,7 +28,7 @@
     fill=potblue-light,
     draw=potnavy-mid,
     text=potnavy,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -32,7 +36,7 @@
     fill=white,
     draw=potblue,
     text=potblue,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -40,7 +44,7 @@
     fill=potgreen,
     draw=potgreen,
     text=white,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -48,7 +52,7 @@
     fill=potgreen-light,
     draw=potgreen,
     text=potnavy,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -56,7 +60,7 @@
     fill=white,
     draw=potgreen,
     text=potgreen,
-    font=\scriptsize,
+    font=\tikzbasicstyle,
     inner sep=5pt,
     align=center
   },
@@ -70,7 +74,7 @@
   },
   % section box label node
   section-label/.style={
-    blue-dark,
+    text=potnavy,
     rounded corners,
     font=\tiny\bfseries,
     inner sep=3pt,
@@ -94,6 +98,11 @@
   },
   % --- ARROWS ---
   arrw/.style={
+    draw=black,
+    font=\tiny,
+    -latex
+  },
+  arrw-main/.style={
     draw=potblue,
     font=\tiny,
     -latex
@@ -118,8 +127,10 @@
   % --- SEMANTIC (role-named) ---
   encoding/.style={blue-light},
   encoding2/.style={blue-mid},
-  input/.style={green-outline},
-  output/.style={green-dark},
+  input/.style={green-light},
+  output/.style={green-outline},
+  multi/.style={double copy shadow={shadow xshift=0.5ex,shadow
+    yshift=-0.75ex}},
   system/.style={
     blue-dark,
     double,
